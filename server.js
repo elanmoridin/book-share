@@ -19,7 +19,7 @@ const PORT = process.env.PORT || 3000;
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/'+ 'book-share';
 
 // Connect to Mongo
-mongoose.connect(MONGODB_URI ,  { useNewUrlParser: true});
+mongoose.connect(MONGODB_URI ,  { useNewUrlParser: true, useUnifiedTopology: true});
 
 // Error / success
 db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
