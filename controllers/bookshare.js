@@ -8,7 +8,11 @@ const Books = require('../models/books.js')
 
 // INDEX ROUTE //
 router.get('/', (req, res) => {
-    res.send('Hello I am Root')
+    Books.find({}, (err, allBooks) => {
+        res.render('index.ejs', {
+            books: allBooks,
+        })
+    })
 })
 
 // SEED ROUTE for DB //

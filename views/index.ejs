@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>Community Collection of Books</h1>
+        <nav>
+          Insert Partial Here!
+        </nav>
+        <ul>
+            <% for(let i = 0; i < books.length; i++){ %>
+              <li>
+                Book Title: <%=books[i].title; %>
+                <br>
+                Book Author: <%=books[i].author; %>
+                <br>
+                Book Genre: <%=books[i].genre; %>
+            </li>
+            <br>
+            <% } %>
+        </ul>
+    </body>
+</html>
