@@ -40,5 +40,14 @@ router.get('/seed', (req, res) => {
     })
 })
 
+// SHOW ROUTE for book information //
+router.get('/:id', (req, res) => {
+    Books.findById(req.params.id, (err, foundBooks) => {
+        res.render('show.ejs', {
+            books: foundBooks,
+        })
+    })
+})
+
 // export router for use in index
 module.exports = router

@@ -11,12 +11,9 @@
         </nav>
         <ul>
             <% for(let i = 0; i < books.length; i++){ %>
-              <li>
+            <li>
+                <a href="/<%=books[i].id %>">
                 Book Title: <%=books[i].title; %>
-                <br>
-                Book Author: <%=books[i].author; %>
-                <br>
-                Book Genre: <%=books[i].genre; %>
             </li>
             <br>
             <% } %>
