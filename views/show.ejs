@@ -5,10 +5,10 @@
         <title></title>
     </head>
     <body>
-        <h1>Book Information</h1>
         <nav>
-            Include Partial Here!
+            <%- include('./partials/nav.ejs')%>
         </nav>
+        <h1>Book Information</h1>
         Book Title: <%=books.title %>
         <br>
         Book Author: <%=books.author %>

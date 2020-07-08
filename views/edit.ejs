@@ -5,6 +5,9 @@
         <title></title>
     </head>
     <body>
+        <nav>
+            <%- include('./partials/nav.ejs')%>
+        </nav>
         <h1>Edit this Book</h1>
         <form action="/<%=book.id%>?_method=PUT" method="POST">
     		  <!--  NOTE: the form is pre-populated with values for the server-->
