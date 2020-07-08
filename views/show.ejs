@@ -16,6 +16,9 @@
         Book Genre: <%=books.genre %>
         <br>
         <a href="/<%=books.id%>/edit">Edit Book Info</a>
+        <form action="/<%= books.id %>?_method=DELETE" method="POST">
+            <input type="submit" value="DELETE"/>
+        </form>
         <nav>
             <a href="/">Back to Book Collection List</a>
         </nav>

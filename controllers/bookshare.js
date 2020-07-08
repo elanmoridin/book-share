@@ -40,14 +40,19 @@ router.get('/seed', (req, res) => {
     })
 })
 
+// NEW ROUTE for new books
+router.get('/new', async (req, res) => {
+    res.render('new.ejs')
+    })
+
 // POST ROUTE for New Books //
 router.post('/', (req, res) => {
-    Books.create(req.body, (err, createdBook => {
+    Books.create(req.body, (createdBook => {
         res.redirect('/')
     }))
 })
 
-// EDIT ROUTE
+// EDIT ROUTE for Page//
 router.get('/:id/edit', (req, res) => {
     Books.findById(req.params.id, (err, foundBook) => {
         res.render('edit.ejs', {
@@ -56,7 +61,7 @@ router.get('/:id/edit', (req, res) => {
     })
 })
 
-// UPDATE ROUTE for editing books
+// UPDATE ROUTE for editing books //
 router.put('/:id', (req, res) => {
     Books.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updateBook) => {
         res.redirect('/')
@@ -69,6 +74,13 @@ router.get('/:id', (req, res) => {
         res.render('show.ejs', {
             books: foundBooks,
         })
+    })
+})
+
+// DELETE ROUTE //
+router.delete('/:id', (req, res) => {
+    Books.findByIdAndRemove(req.params.id, (err, deleteBook) => {
+        res.redirect('/') // redirect to index page
     })
 })
 
