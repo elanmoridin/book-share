@@ -52,7 +52,7 @@ app.use(
       resave: false, // default more info: https://www.npmjs.com/package/express-session#resave
       saveUninitialized: false // default  more info: https://www.npmjs.com/package/express-session#resave
     })
-  )
+)
 
 // importing the book model 
 const Books = require('./models/books.js')

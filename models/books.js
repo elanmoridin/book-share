@@ -5,7 +5,8 @@ const mongoose = require('mongoose')
 const bookSchema = new mongoose.Schema({
     title: {type: String, required: true},
     author: {type: String},
-    genre: {type: String}
+    genre: {type: String},
+    checkedOut: {type: Boolean ,default: false},
 })
 
 // creating a variable to allow other pages to pull info from this schema
