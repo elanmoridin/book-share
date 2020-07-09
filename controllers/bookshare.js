@@ -65,6 +65,12 @@ router.post('/', isAuthenticated, (req, res) => {
 // EDIT ROUTE for Check out/Check in
 router.put('/:id/checkout', isAuthenticated, (req, res) => {
     Books.findByIdAndUpdate(req.params.id, {new: true}, (err, checkedBook) => {
+        if (checkedBook.checkedOut == false) {
+            checkedBook.checkedOut = true 
+        } else {
+            checkedBook.checkedOut = false
+        }
+        checkedBook.save()
         res.send(checkedBook)
     })
 })
