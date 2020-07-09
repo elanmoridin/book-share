@@ -71,7 +71,7 @@ router.put('/:id/checkout', isAuthenticated, (req, res) => {
             checkedBook.checkedOut = false
         }
         checkedBook.save()
-        res.send(checkedBook)
+        res.redirect('/')
     })
 })
 
