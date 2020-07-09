@@ -5,6 +5,9 @@
         <title></title>
     </head>
     <body>
+        <nav>
+            <%- include('./partials/nav.ejs')%>
+        </nav>
         <h1>New Book to Community</h1>
         <form action="/" method="POST">
     		  <!--  NOTE: the form is pre-populated with values for the server-->
@@ -13,5 +16,6 @@
     		  Book Genre: <input type="text" name="genre"/><br/>
             <input type="submit" name="" value="Add New Book"/>
         </form>
+        <a href="/">Back to Community Book Collection</a>
     </body>
 </html>
