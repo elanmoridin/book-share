@@ -67,10 +67,14 @@ router.put('/:id/checkout', isAuthenticated, (req, res) => {
     Books.findByIdAndUpdate(req.params.id, {new: true}, (err, checkedBook) => {
         if (checkedBook.checkedOut == false) {
             checkedBook.checkedOut = true 
+            checkedBook.checkedUser = req.session.currentUser.username
         } else {
             checkedBook.checkedOut = false
+            checkedBook.checkedUser = ''
         }
         checkedBook.save()
+        // testing grabbing username from session for checkout purposes
+        // console.log(req.session.currentUser.username)
         res.redirect('/')
     })
 })
