@@ -2,7 +2,8 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title></title>
+    
+        <title>CBC</title>
     </head>
     <body>
         <nav>
@@ -13,7 +14,7 @@
         <ul>
             <% for(let i = 0; i < books.length; i++){ %>
             <li>
-                <a href="/<%=books[i].id %>">
+                <a href="/<%=books[i].id %>/book">
                 Book Title: <%=books[i].title; %>
             </li>
             <br>
