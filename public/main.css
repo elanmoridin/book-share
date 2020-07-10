@@ -1,3 +1,26 @@
+body {
+    font-family: 'Gentium Book Basic', serif !important;
+}
+
+h1 {
+    text-align: center;
+}
+
 ul {
     list-style-type: none;
 }
+
+.book-shelf {
+    width: 100%;
+}
+
+.books {
+    margin: 20px 20px 20px 20px;
+    border: 1px solid black;border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+    height: 250px;
+    width: 150px;
+    float: left;
+}
+

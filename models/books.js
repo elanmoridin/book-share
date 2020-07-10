@@ -8,6 +8,7 @@ const bookSchema = new mongoose.Schema({
     genre: {type: String},
     checkedOut: {type: Boolean ,default: false},
     checkedUser: {type: String},
+    img: {type: String},
 })
 
 // creating a variable to allow other pages to pull info from this schema

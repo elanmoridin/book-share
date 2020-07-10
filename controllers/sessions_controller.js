@@ -36,10 +36,11 @@ sessions.post('/', (req, res) => {
 })
 
 sessions.delete('/', (req, res) => {
-  req.session.destroy(() => {
-      console.log('Logout successful')
-    res.redirect('/')
-  })
+    console.log("I hit the route")
+//   req.session.destroy(() => {
+//       console.log('Logout successful')
+//     // res.redirect('/')
+//   })
 })
 
 module.exports = sessions

@@ -31,16 +31,19 @@ router.get('/seed', (req, res) => {
                 title: "The Eye of the World",
                 author: "Robert Jordan",
                 genre: "Fantasy",
+                img: "https://vignette.wikia.nocookie.net/wot/images/2/2d/EOTWCover.jpg/revision/latest/top-crop/width/300/height/300?cb=20090805030046",
             },
             {
                 title: "The Complete Robot",
                 author: "Isaac Asimov",
                 genre: "Science Fiction",
+                img: "https://images-na.ssl-images-amazon.com/images/I/51VhZjAQ1yL.jpg",
             },
             {
                 title: "The 4-Hour Chef",
                 author: "Tim Ferriss",
                 genre: "Self-Help",
+                img: "https://pbs.twimg.com/profile_images/2868657518/f377d8bb7e20af12a43bffc356ef4d15_400x400.png",
             }
         ], (err, data) => {
             res.redirect('/')

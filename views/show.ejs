@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
+        <link rel = "stylesheet" href="/main.css">
         <link rel = "icon" type="image/png" href="/book_icon.png">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&display=swap" rel="stylesheet">
         <title>CBC</title>
     </head>
     <body>
-        <nav>
-            <%- include('./partials/nav.ejs')%>
-        </nav>
+        <%- include('./partials/nav.ejs')%>
+        <div>
         <h1>Book Information</h1>
+        <img src="<%=books.img%>">
+        <br>
         Book Title: <%=books.title %>
         <br>
         Book Author: <%=books.author %>
@@ -28,6 +31,7 @@
         <form action="/<%= books.id %>?_method=DELETE" method="POST">
             <input type="submit" value="DELETE"/>
         </form>
+        </div>
         <nav>
             <a href="/">Back to Book Collection List</a>
         </nav>
