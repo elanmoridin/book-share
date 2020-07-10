@@ -4,6 +4,7 @@ body {
 
 h1 {
     text-align: center;
+    font-size: 60px !important;
 }
 
 ul {
@@ -22,5 +23,16 @@ ul {
     height: 250px;
     width: 150px;
     float: left;
+    background-color: #EFE5D5;
+}
+
+.welcome {
+    color: blue !important;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.nav-link{
+    font-size: 20px;
 }
 

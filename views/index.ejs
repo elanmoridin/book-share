@@ -15,8 +15,9 @@
         <ul>
             <% for(let i = 0; i < books.length; i++){ %>
             <div class = "books">
-                    <a href="/<%=books[i].id %>/book"><%=books[i].title; %></a><br>
-                    <img src="<%=books[i].img%>" width = "100">
+                    <a class="text-dark" href="/<%=books[i].id %>/book"><%=books[i].title; %></a><br>
+                    <a href="/<%books[i].id%>/book">
+                    <img src="<%=books[i].img%>" width = "100"></a>
             </div>
             <% } %>
         </ul>
