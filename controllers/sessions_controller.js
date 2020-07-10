@@ -37,6 +37,7 @@ sessions.post('/', (req, res) => {
 
 sessions.delete('/', (req, res) => {
   req.session.destroy(() => {
+      console.log('Logout successful')
     res.redirect('/')
   })
 })
