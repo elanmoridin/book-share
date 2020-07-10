@@ -19,6 +19,7 @@
             <% if(books.checkedOut == false) {%>
                 <input type="submit" value="Checkout Book">
             <% } else { %>
+                <p>Book is checked out by <%=books.checkedUser%></p>
                 <input type="submit" value="Check in Book">
                 <% } %>
         </form>
