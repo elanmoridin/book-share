@@ -10,28 +10,29 @@
     <body>
         <%- include('./partials/nav.ejs')%>
         <h1>Community Collection of Books<img src="/title_book.jpg"  width="100"></h1>
+        <a class="btn btn-info" href="/">Back to Community Book Shelf</a>
         <div class = "text-center">
-        <h1>Book Information</h1>
-        <img src="<%=books.img%>" width="300px">
-        <br>
-        Book Title: <%=books.title %>
-        <br>
-        Book Author: <%=books.author %>
-        <br>
-        Book Genre: <%=books.genre %>
-        <br>
-        <form action="/<%=books.id%>/checkout?_method=PUT" method="POST">
-            <% if(books.checkedOut == false) {%>
-                <input type="submit" value="Checkout Book" class="btn btn-lg btn-primary">
-            <% } else { %>
-                <p>Book is checked out by <%=books.checkedUser%></p>
-                <input type="submit" value="Check in Book" class="btn btn-lg btn-primary">
+        <div class = "book-shelf" style="background-image: url('https://i1.wp.com/hmp.is.it/wp-content/uploads/2013/08/wood.png?ssl=1')">
+            <h2 class="text-white">Book Information</h2>
+            <img src="<%=books.img%>" width="300px">
+            <br>
+            <h4 class="text-white">Book Title: <%=books.title %></h4>
+            <h5 class="text-white">Book Author: <%=books.author %></h5>
+            <h5 class="text-white">Book Genre: <%=books.genre %></h5>
+            <br>
+            <form action="/<%=books.id%>/checkout?_method=PUT" method="POST">
+                <% if(books.checkedOut == false) {%>
+                    <input type="submit" value="Checkout Book" class="btn btn-lg btn-primary">
+                <% } else { %>
+                    <h5 class="text-white">Book is checked out by <%=books.checkedUser%></h5>
+                    <input type="submit" value="Check in Book" class="btn btn-lg btn-primary">
                 <% } %>
-        </form>
-        <form action="/<%= books.id %>?_method=DELETE" method="POST">
-            <a href="/<%=books.id%>/edit" class="btn btn-sm btn-success">Edit Book</a>
-            <input type="submit" value="Delete Book" class="btn btn-danger btn-sm"/>
-        </form>
+            </form>
+            <form action="/<%= books.id %>?_method=DELETE" method="POST">
+                <a href="/<%=books.id%>/edit" class="btn btn-sm btn-success">Edit Book</a>
+                <input type="submit" value="Delete Book" class="btn btn-danger btn-sm"/>
+            </form>
+        </div>
         </div>
         <nav>
             <a class="btn btn-info" href="/">Back to Community Book Shelf</a>
