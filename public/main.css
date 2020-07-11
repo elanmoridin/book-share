@@ -12,22 +12,38 @@ ul {
 }
 
 .book-shelf {
+    min-height: 700px;
     width: 100%;
+    border: 10px solid rgb(109, 56, 21);
 }
 
 .books {
     margin: 20px 20px 20px 20px;
-    border: 1px solid black;border-radius: 20px;
+    border: 1px solid black;
+    
     text-align: center;
     padding: 10px;
-    height: 250px;
+    height: 350px;
     width: 150px;
     float: left;
-    background-color: #EFE5D5;
+    background-color: rgb(65, 167, 185);
+    /* Box Shadow book effect - https://css-tricks.com/snippets/css/stack-of-paper/ */
+    box-shadow:
+      /* The top layer shadow */
+      0 1px 1px rgba(0,0,0,0.15),
+      /* The second layer */
+      0 10px 0 -5px #eee,
+      /* The second layer shadow */
+      0 10px 1px -4px rgba(0,0,0,0.15),
+       /* The third layer */
+      0 20px 0 -10px #eee,
+      /* The third layer shadow */
+      0 20px 1px -9px rgba(0,0,0,0.15);
+      /* Padding for demo purposes */
+      padding: 30px;
 }
 
 .welcome {
-    color: blue !important;
     font-size: 20px;
     text-transform: uppercase;
 }
