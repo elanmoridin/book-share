@@ -9,7 +9,6 @@ sessions.get('/new', (req, res) => {
 
 // on sessions form submit (log in)
 sessions.post('/', (req, res) => {
-
   // Look for the username
   User.findOne({ username: req.body.username }, (err, foundUser) => {
     // Database error
@@ -18,6 +17,7 @@ sessions.post('/', (req, res) => {
       res.send('DB had an issue')
     } else if (!foundUser) {
       // if found user is undefined/null not found etc
+      console.log(req.body.username)
       res.send('<a  href="/users/new">Sorry, no user found </a>')
     } else {
       // user exists

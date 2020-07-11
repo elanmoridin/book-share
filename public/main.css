@@ -1,8 +1,32 @@
-body {
+body, html {
     font-family: 'Gentium Book Basic', serif !important;
+    height: 100% !important;
+}
+
+.form-signin .form-control{
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 h1 {
+    font-family: 'Gentium Book Basic', serif !important;
     text-align: center;
     font-size: 60px !important;
 }

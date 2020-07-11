@@ -6,7 +6,7 @@ const methodOverride  = require('method-override');
 const mongoose = require ('mongoose');
 const app = express ();
 const db = mongoose.connection;
-const sessions = require('express-session')
+const session = require('express-session')
 require('dotenv').config()
 //___________________
 //Port
@@ -47,7 +47,7 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
 // sessionware Middleware
 app.use(
-    sessions({
+    session({
       secret: process.env.SECRET, //a random string do not copy this value or your stuff will get hacked
       resave: false, // default more info: https://www.npmjs.com/package/express-session#resave
       saveUninitialized: false // default  more info: https://www.npmjs.com/package/express-session#resave
