@@ -4,6 +4,10 @@ body, html {
     margin: 0;
 }
 
+.log-in-heading {
+    margin-bottom: 0;
+}
+
 .form-signin {
     width: 100%;
     max-width: 330px;
@@ -27,6 +31,16 @@ body, html {
     font-size: 16px;
 }
 
+.log-in-container {
+    background-image: url("/community-book-share.jpg");
+    height: 100%;
+}
+
+.log-in-div {
+    width: 400px;
+    
+}
+
 h1 {
     font-family: 'Gentium Book Basic', serif !important;
     text-align: center;
@@ -42,6 +56,24 @@ ul {
     width: 100%;
     border: 10px solid rgb(109, 56, 21);
     display: flex;
+}
+
+.book-shelf-show {
+    min-height: 700px;
+    width: 100%;
+    border: 10px solid rgb(109, 56, 21);
+}
+
+.book-shelf-new {
+    min-height: 700px;
+    width: 100%;
+    border: 10px solid rgb(109, 56, 21);
+}
+
+.book-shelf-edit {
+    min-height: 700px;
+    width: 100%;
+    border: 10px solid rgb(109, 56, 21);
 }
 
 .books {
