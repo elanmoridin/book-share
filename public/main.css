@@ -26,6 +26,7 @@ ul {
     min-height: 700px;
     width: 100%;
     border: 10px solid rgb(109, 56, 21);
+    display: flex;
 }
 
 .books {
