@@ -1,6 +1,7 @@
 body, html {
     font-family: 'Gentium Book Basic', serif !important;
-    height: 100% !important;
+    height: 100%;
+    margin: 0;
 }
 
 .form-signin .form-control{
@@ -9,20 +10,6 @@ body, html {
     height: auto;
     padding: 10px;
     font-size: 16px;
-}
-
-.form-control {
-    display: block;
-    width: 100%;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 h1 {

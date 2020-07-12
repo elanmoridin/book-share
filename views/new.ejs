@@ -9,25 +9,36 @@
     </head>
     <body>
         <%- include('./partials/nav.ejs')%>
-        <h1>New Book to Community</h1>
+        <h1>Add New Book to Community<img src="/title_book.jpg"  width="100"></h1>
+        <a class="btn btn-info" href="/">Back to Community Book Shelf</a>
         <div class="text-center">
             <div class = "book-shelf" style="background-image: url('https://i1.wp.com/hmp.is.it/wp-content/uploads/2013/08/wood.png?ssl=1')">
                 <form action="/" method="POST">
-                    <% if (books.img = null) {%>
-    		            <!--  NOTE: the form is pre-populated with values for the server-->
-    		            Book Title: <input type="text" name="title"/><br/>
-    		            Book Author: <input type="text" name="author"/><br/>
-                        Book Genre: <input type="text" name="genre"/><br/>
-                    <% } else { %>
-                        <img src="<%=book.img%>">
-                        Book Title: <input type="text" name="title"/><br/>
-    		            Book Author: <input type="text" name="author"/><br/>
-                        Book Genre: <input type="text" name="genre"/><br/>
-                    <% } %>
-                <input type="submit" name="" value="Add New Book"/>
+                    <br>
+                    <img src="/unknown_book_black.png" width = "300px">
+                    <br>
+                    <div class="col-sm-4">
+                        <input type="text" name="title" class="form-control bg-danger text-white" placeholder="Book Title" required>
+                    </div>
+                    <br>
+                    <div class="col-sm-4">
+                        <input type="text" name="author" class="form-control bg-danger text-white" placeholder="Book Author" required>
+                    </div>
+                    <br>
+                    <div class="col-sm-4">
+                        <input type="text" name="genre" class="form-control" placeholder="Book Genre">
+                    </div>
+                    <br>
+                    <div class="col-sm-4">
+                        <input type="text" name="img" class="form-control" placeholder="Book Img Link">
+                    </div>
+                    <br>
+                <input type="submit" name="new-book" value="Add New Book" class="btn btn-primary btn-success"/>
             </form>
             </div>
         </div>
-        <a href="/">Back to Community Book Collection</a>
+        <nav>
+            <a class="btn btn-info" href="/">Back to Community Book Shelf</a>
+        </nav>
     </body>
 </html>
