@@ -12,7 +12,7 @@
         <h1>Edit this Book</h1>
         <a class="btn btn-info" href="/">Back to Community Book Shelf</a>
         <div class="text-center">
-            <div class = "book-shelf" style="background-image: url('https://i1.wp.com/hmp.is.it/wp-content/uploads/2013/08/wood.png?ssl=1')">
+            <div class = "book-shelf-edit" style="background-image: url('https://i1.wp.com/hmp.is.it/wp-content/uploads/2013/08/wood.png?ssl=1')">
                 <form action="/<%=book.id%>?_method=PUT" method="POST">
                     <% if (book.img == '') {%>
                         <!--  NOTE: the form is pre-populated with values for the server-->
