@@ -14,14 +14,18 @@
         <div class = "text-center">
         <div class = "book-shelf" style="background-image: url('https://i1.wp.com/hmp.is.it/wp-content/uploads/2013/08/wood.png?ssl=1')">
             <h2 class="text-white">Book Information</h2>
-            <img src="<%=books.img%>" width="300px">
+            <% if (books.img == '') { %>
+                <img src="/unknown_book_black.png" width = "300"></a>
+            <% } else { %>
+                <img src="<%=books.img%>" width="300px">
+            <% } %>   
             <br>
             <h4 class="text-white">Book Title: <%=books.title %></h4>
             <h5 class="text-white">Book Author: <%=books.author %></h5>
             <h5 class="text-white">Book Genre: <%=books.genre %></h5>
             <br>
             <form action="/<%=books.id%>/checkout?_method=PUT" method="POST">
-                <% if(books.checkedOut == false) {%>
+                <% if (books.checkedOut == false) {%>
                     <input type="submit" value="Checkout Book" class="btn btn-lg btn-primary">
                 <% } else { %>
                     <h5 class="text-white">Book is checked out by <%=books.checkedUser%></h5>

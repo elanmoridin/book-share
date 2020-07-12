@@ -54,6 +54,7 @@ router.get('/seed', (req, res) => {
 // NEW ROUTE for new books
 router.get('/new', isAuthenticated, async (req, res) => {
     res.render('new.ejs', {
+        book: foundBook,
         currentUser: req.session.currentUser,
     })
     })

@@ -17,7 +17,11 @@
             <div class = "books">
                     <a class="text-dark" href="/<%=books[i].id %>/book"><%=books[i].title; %></a><br>
                     <a href="/<%=books[i].id %>/book">
-                    <img src="<%=books[i].img%>" width = "100"></a>
+                    <% if (books[i].img == '') { %>
+                        <img src="/unknown_book_black.png" width = "100"></a>
+                    <% } else { %>
+                        <img src="<%=books[i].img%>" width = "100"></a>
+                    <% } %>    
             </div>
             <% } %>
         </ul>

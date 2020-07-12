@@ -10,13 +10,58 @@
     <body>
         <%- include('./partials/nav.ejs')%>
         <h1>Edit this Book</h1>
-        <form action="/<%=book.id%>?_method=PUT" method="POST">
-    		  <!--  NOTE: the form is pre-populated with values for the server-->
-    		  Book Title: <input type="text" name="title" value="<%=book.title%>"/><br/>
-    		  Book Author: <input type="text" name="author" value="<%=book.author%>"/><br/>
-    		  Book Genre: <input type="text" name="genre" value="<%=book.genre%>">
-            <br/>
-            <input type="submit" name="" value="Submit Changes to Book"/>
-        </form>
+        <a class="btn btn-info" href="/">Back to Community Book Shelf</a>
+        <div class="text-center">
+            <div class = "book-shelf" style="background-image: url('https://i1.wp.com/hmp.is.it/wp-content/uploads/2013/08/wood.png?ssl=1')">
+                <form action="/<%=book.id%>?_method=PUT" method="POST">
+                    <% if (book.img == '') {%>
+                        <!--  NOTE: the form is pre-populated with values for the server-->
+                        <img src="/unknown_book.png" width = "300px">
+                        <br>
+                        <div class="col-sm-4">
+                            <h5 class="text-white">Book Title: <input type="text" name="title" value="<%=book.title%>"></h5>
+                        </div>
+                        <br>
+                        <div class="col-sm-4">
+                            <h5 class="text-white">Book Author: <input type="text" name="author" value="<%=book.author%>"></h5>
+                        </div>
+                        <br>
+                        <div class="col-sm-4">
+                            <h5 class="text-white">Book Genre: <input type="text" name="genre" value="<%=book.genre%>"></h5>
+                        </div>
+                        <br>
+                        <div class="col-sm-4">
+                            <h5 class="text-white">Book Image Link: <input type="text" name="img" value="<%=book.img%>"></h5>
+                        </div>
+                        <br>
+                    <% } else { %>
+                        <!--  NOTE: the form is pre-populated with values for the server-->
+                        <br>
+                        <img src="<%=book.img%>" width = "300px">
+                        <br>
+                        <div class="col-sm-4">
+                            <h5 class="text-white">Book Title: <input type="text" name="title" value="<%=book.title%>"></h5>
+                        </div>
+                        <br>
+                        <div class="col-sm-4">
+                            <h5 class="text-white">Book Author: <input type="text" name="author" value="<%=book.author%>"></h5>
+                        </div>
+                        <br>
+                        <div class="col-sm-4">
+                            <h5 class="text-white">Book Genre: <input type="text" name="genre" value="<%=book.genre%>"></h5>
+                        </div>
+                        <br>
+                        <div class="col-sm-4">
+                            <h5 class="text-white">Book Image Link: <input type="text" name="img" value="<%=book.img%>"></h5>
+                        </div>
+                        <br>
+                    <% } %>
+                    <input class="btn btn-primary btn-success" type="submit" name="" value="Submit Changes"/>
+                </form>
+            </div>
+        </div>
+        <nav>
+            <a class="btn btn-info" href="/">Back to Community Book Shelf</a>
+        </nav>
     </body>
 </html>

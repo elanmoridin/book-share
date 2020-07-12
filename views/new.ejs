@@ -10,13 +10,24 @@
     <body>
         <%- include('./partials/nav.ejs')%>
         <h1>New Book to Community</h1>
-        <form action="/" method="POST">
-    		  <!--  NOTE: the form is pre-populated with values for the server-->
-    		  Book Title: <input type="text" name="title"/><br/>
-    		  Book Author: <input type="text" name="author"/><br/>
-    		  Book Genre: <input type="text" name="genre"/><br/>
-            <input type="submit" name="" value="Add New Book"/>
-        </form>
+        <div class="text-center">
+            <div class = "book-shelf" style="background-image: url('https://i1.wp.com/hmp.is.it/wp-content/uploads/2013/08/wood.png?ssl=1')">
+                <form action="/" method="POST">
+                    <% if (books.img = null) {%>
+    		            <!--  NOTE: the form is pre-populated with values for the server-->
+    		            Book Title: <input type="text" name="title"/><br/>
+    		            Book Author: <input type="text" name="author"/><br/>
+                        Book Genre: <input type="text" name="genre"/><br/>
+                    <% } else { %>
+                        <img src="<%=book.img%>">
+                        Book Title: <input type="text" name="title"/><br/>
+    		            Book Author: <input type="text" name="author"/><br/>
+                        Book Genre: <input type="text" name="genre"/><br/>
+                    <% } %>
+                <input type="submit" name="" value="Add New Book"/>
+            </form>
+            </div>
+        </div>
         <a href="/">Back to Community Book Collection</a>
     </body>
 </html>
