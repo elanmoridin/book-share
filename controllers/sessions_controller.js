@@ -7,6 +7,14 @@ sessions.get('/new', (req, res) => {
   res.render('sessions/new.ejs', { currentUser: req.session.currentUser, currentUser: req.session.currentUser })
 })
 
+sessions.get('/invalidpassword', (req, res) => {
+    res.render('sessions/badpassword.ejs', { currentUser: req.session.currentUser, currentUser: req.session.currentUser })
+  })
+
+sessions.get('/invaliduser', (req, res) => {
+    res.render('sessions/baduser.ejs', { currentUser: req.session.currentUser, currentUser: req.session.currentUser})
+})
+
 // on sessions form submit (log in)
 sessions.post('/', (req, res) => {
   // Look for the username
@@ -18,7 +26,7 @@ sessions.post('/', (req, res) => {
     } else if (!foundUser) {
       // if found user is undefined/null not found etc
       console.log(req.body.username)
-      res.send('<a  href="/users/new">Sorry, no user found </a>')
+      res.redirect('sessions/invaliduser')
     } else {
       // user exists
       // check if password matches
@@ -29,7 +37,7 @@ sessions.post('/', (req, res) => {
         res.redirect('/')
       } else {
         // passwords do not match
-        res.send('<a href="/sessions/new"> password does not match </a>')
+        res.redirect('sessions/invalidpassword')
       }
     }
   })

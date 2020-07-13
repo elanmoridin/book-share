@@ -3,6 +3,7 @@ const express = require('express')
 const users = express.Router()
 const User = require('../models/users.js')
 
+// SHOW ROUTE for new users //
 users.get('/new', (req, res) => {
   res.render('users/new.ejs', {
     currentUser: req.session.currentUser,

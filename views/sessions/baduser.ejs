@@ -10,14 +10,14 @@
 </head>
 <body class = "text-center" id="new-user-signup">
     <h1 class="bg-info log-in-heading">Community Collection of Books</h1>
-    <h2 class="bg-info log-in-heading">Sign Up</h2>
+    <h3 class="bg-warning log-in-heading">Invalid User, Try Again</h3>
     <div class="log-in-container">
         <div class="log-in-div col-md-8 offset-md-2">
             <form class="form-signin" action="/users" method="POST">
                 <label for ="inputUsername" class="sr-only">Username</label>
-                <input type="text" class ="form-control" name="username" placeholder="Enter Desired Username"/><br>
+                <input type="text" class ="form-control" name="username" placeholder="Username"/><br>
                 <label for="inputPassword" class="sr-only">Password</label>
-                <input type="password" class="form-control" name="password" placeholder="Enter Desired Password"/><br>
+                <input type="password" class="form-control" name="password" placeholder="Password"/><br>
                 <br>
                 <input class ="btn btn-lg btn-primary" type="submit" value="Sign Up"/>
             </form>
