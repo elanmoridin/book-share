@@ -29,7 +29,9 @@
                     <input type="submit" value="Checkout Book" class="btn btn-lg btn-primary">
                 <% } else { %>
                     <h5 class="text-white">Book is checked out by <%=books.checkedUser%></h5>
-                    <input type="submit" value="Check in Book" class="btn btn-lg btn-primary">
+                    <% if (currentUser.username == books.checkedUser) { %>
+                        <input type="submit" value="Check in Book" class="btn btn-lg btn-primary">
+                    <% } %>
                 <% } %>
             </form>
             <form action="/<%= books.id %>?_method=DELETE" method="POST">

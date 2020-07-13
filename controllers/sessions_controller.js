@@ -25,7 +25,7 @@ sessions.post('/', (req, res) => {
       res.send('DB had an issue')
     } else if (!foundUser) {
       // if found user is undefined/null not found etc
-      console.log(req.body.username)
+      // console.log(req.body.username)
       res.redirect('sessions/invaliduser')
     } else {
       // user exists
