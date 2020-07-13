@@ -4,7 +4,7 @@
 
 ##Book Sharing Application
 
-(https://imgur.com/a/knFnCMg)
+![Screenshot](https://imgur.com/a/knFnCMg "Screenshot 1")
 
 ## Usage
 
@@ -35,8 +35,11 @@ Setup Sessions addon with NPM
 `npm install express-session`
 
 create env file
+
 `touch .env`
+
 `npm install dotenv`
+
 Configure your PORT and database connection within this file
 
 Install Method Override to be able to DELETE with POST
