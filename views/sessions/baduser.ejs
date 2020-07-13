@@ -13,15 +13,14 @@
     <h3 class="bg-warning log-in-heading">Invalid User, Try Again</h3>
     <div class="log-in-container">
         <div class="log-in-div col-md-8 offset-md-2">
-            <form class="form-signin" action="/users" method="POST">
+            <form class="form-signin" action="/sessions" method="POST">
                 <label for ="inputUsername" class="sr-only">Username</label>
                 <input type="text" class ="form-control" name="username" placeholder="Username"/><br>
                 <label for="inputPassword" class="sr-only">Password</label>
                 <input type="password" class="form-control" name="password" placeholder="Password"/><br>
                 <br>
-                <input class ="btn btn-lg btn-primary" type="submit" value="Sign Up"/>
+                <input class ="btn btn-lg btn-primary" type="submit" value="Log In"/>
             </form>
-        <a href="/sessions/new" class="btn btn-lg btn-primary">Back to Sign In Page</a>
         </div>
     </div>
 </body>
