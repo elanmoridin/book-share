@@ -1,10 +1,9 @@
 # book-share
 
-## Community Book Collection
 
-## Book Sharing Application
+## Book Sharing Application - Community Book Collection
 
-[logo]: https://i.imgur.com/auQwbq3.png
+![Screenshot](https://i.imgur.com/auQwbq3.png)
 
 ## Usage
   Application is for a community to use for local book sharing. You can create an account and enter your books and then checkout the books from other users. 
