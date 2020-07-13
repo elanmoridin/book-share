@@ -4,7 +4,7 @@
 
 ##Book Sharing Application
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/knFnCMg"><a href="//imgur.com/a/knFnCMg">CBC</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+[logo]: https://i.imgur.com/auQwbq3.png
 
 ## Usage
   Application is for a community to use for local book sharing. You can create an account and enter your books and then checkout the books from other users. 
