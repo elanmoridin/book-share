@@ -4,7 +4,7 @@
 
 ##Book Sharing Application
 
-![Screenshot](https://imgur.com/a/knFnCMg "Screenshot 1")
+(https://imgur.com/a/knFnCMg "Screenshot 1")
 
 ## Usage
   Application is for a community to use for local book sharing. You can create an account and enter your books and then checkout the books from other users. 
