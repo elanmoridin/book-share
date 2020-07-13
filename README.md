@@ -13,7 +13,7 @@
   Navigate to the top level of the app with command line  
 
 Install MongoDB  
-Install Documentation: <docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/>  
+Install Documentation: [Install Help](docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/)  
 This app will use the collections books and users inside the DB book-share  
 
 Initialize the directory  
