@@ -40,6 +40,9 @@ Configure your PORT and database connection within this file
 Install Method Override to be able to DELETE with POST  
 `npm install method-override`  
 
+Install bcrypt packge for using passwords with MongoDB with encrytpion  
+`npm install bcrypt`  
+
 Once dependancies are installed you can run the server on the local machine with 
 `nodemon server.js`  
 
