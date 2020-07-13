@@ -116,3 +116,7 @@ ul {
     vertical-align: middle;
     float: none;
     }
+
+@media only screen and (max-width: 600px){
+    
+}

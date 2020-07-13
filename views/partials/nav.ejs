@@ -5,9 +5,11 @@
     </a>
     <a class="nav-item welcome text-dark">Welcome <%=currentUser.username%></a>
     <a class="nav-link text-dark" href="/new">Add Book to Collection<span class="sr-only"></span></a>
-        <form action="/sessions?_method=DELETE" method="POST">
+    <a class="btn btn-primary" href="/sessions/new">Log Out</a>
+    <!-- Can't get sign out to work with delete session so doing a link to the new page as a short work around -->
+        <!-- <form action="/sessions?_method=DELETE" method="POST">
             <input type="submit" value="Log Out" class="btn btn-primary"/>
-        </form>
+        </form> -->
         <% } else { %>
 <nav class="navbar navbar-expand-lg navbar-light bg-info">
             <a class="navbar-brand" href="/users/new">Sign Up</a>
