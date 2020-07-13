@@ -8,16 +8,16 @@
 ## Usage
   Application is for a community to use for local book sharing. You can create an account and enter your books and then checkout the books from other users. 
 
-## Installation and Requirements
-  Clone the repository
-  Navigate to the top level of the app with command line
+## Installation and Requirements  
+  Clone the repository  
+  Navigate to the top level of the app with command line  
 
-Install MongoDB
-[Install Documentation]: docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
-This app will use the collections books and users inside the DB book-share
+Install MongoDB  
+[Install Documentation]: docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/  
+This app will use the collections books and users inside the DB book-share  
 
-Initialize the directory
-`npm init`
+Initialize the directory  
+`npm init`   
 
 Install Express
 `npm install express`
