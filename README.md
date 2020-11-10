@@ -5,6 +5,9 @@
 
 ![Screenshot](https://i.imgur.com/auQwbq3.png)
 
+## Live Site  
+[Link to Live Site](https://community-book-share.herokuapp.com/)
+
 ## Usage
   Application is for a community to use for local book sharing. You can create an account and enter your books and then checkout the books from other users. 
 
@@ -48,6 +51,12 @@ Once dependancies are installed you can run the server on the local machine with
 
 You can seed the application with the seed file and route I setup by going to 
 localhost:3000/seed  
+
+## Notes and Future  
+The logout functionality isn't working yet. Still working on the bug. It just redirects to the login page for now  
+Want to implement an api search for books and add them to the database that way rather than entering info for indivudal books  
+Want to implement an api maps restriction to keep people from being too far apart from interatcting since the point is a local exchange  
+Want to implement emails with user accounts and that way when you check out a book it'll email the owner of it and let you set up a meeting to exchange or drop off  
 
 ## Acknowledgements  
 See LICENSE file for license info!  
